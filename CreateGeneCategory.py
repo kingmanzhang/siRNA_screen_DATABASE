@@ -1,13 +1,16 @@
 import sqlite3
 # set up connection
-conn = sqlite3.connect('/Users/Aaron/Dropbox/siRNA screening/database/genome_siRNA.db')
+conn = sqlite3.connect(
+    '/Users/Aaron/Dropbox/siRNA screening/database/genome_siRNA.db')
 
 
 # create a cursor
 cur = conn.cursor()
 
 # create Table gene_category if it does not exist
-cur.execute('CREATE TABLE IF NOT EXISTS gene_category(category_id INTEGER PRIMARY KEY, category_name VARCHAR);')
+cur.execute(
+    'CREATE TABLE IF NOT EXISTS gene_category(category_id INTEGER PRIMARY KEY, \
+    category_name VARCHAR);')
 cur.executescript('''
     INSERT INTO gene_category(category_id, category_name) VALUES(1, 'kinase');
     INSERT INTO gene_category(category_id, category_name) VALUES(2, 'GPCR');
