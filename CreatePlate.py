@@ -1,6 +1,6 @@
 import sqlite3
 # set up connection
-conn = sqlite3.connect('/Users/Aaron/Documents/Software-Carpentry/genome_siRNA')
+conn = sqlite3.connect('/Users/Aaron/Dropbox/siRNA screening/database/genome_siRNA.db')
 
 # create a cursor
 cur = conn.cursor()
